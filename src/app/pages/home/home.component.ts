@@ -18,12 +18,12 @@ export class HomeComponent implements OnInit {
     this.gitService.getGit("/repos/facebook/react/issues").then((data) => {
       this.issues = data;
       this.showSkeleton = false;
-    }).catch(err => {
+    }).catch(_ => {
       this.showSkeleton = false;
     });
   }
 
-  public search(term) {
+  public search(term: string): void {
     this.termToSearch = term;
   }
 }
