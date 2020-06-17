@@ -1,0 +1,28 @@
+<div class="near-git-table">
+    <table style="width:100%" class="table">
+        <tr class="header">
+            <th width="15%">User</th>
+            <th>Issue</th>
+        </tr>
+
+        <tr *ngFor="let issue of issues">
+            <td>
+                <div class="user">
+                    <img width="40px" src="{{issue.user.avatar_url}}" alt="">
+                    <p>{{issue.user.login}}</p>
+                </div>
+            </td>
+            <td>
+                <div class="info">
+                    <p class="title">{{issue.title}}</p>
+                    <p class="body">Opened: {{issue.created_at | date}}</p>
+                </div>
+            </td>
+        </tr>
+        
+        <div *ngIf="issues.length === 0 && !skeletons" class="empty-state">
+            <p>No results</p>
+            <img width="100px" src="https://img.icons8.com/cotton/64/000000/empty-box.png"/>
+        </div>
+    </table>
+</div>

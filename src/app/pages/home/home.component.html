@@ -1,0 +1,28 @@
+<app-search (valueChange)="search($event)"></app-search>
+<app-table [issues]="issues | searchByTitle:termToSearch" [skeletons]="showSkeleton"></app-table>
+<div *ngIf="showSkeleton" class="skeleton">
+    <ng-container *ngFor="let a of [0, 1, 2, 3, 4, 5]">
+        <ngx-skeleton-loader
+        count="1"
+        appearance="circle"
+        [theme]="{
+            width: '100px',
+            height: '100px',
+            'border-radius': '10px',
+            marginLeft: '150px'
+        }"
+        >
+        </ngx-skeleton-loader>
+        <ngx-skeleton-loader
+            count="1"
+            [theme]="{
+                'border-radius': '0',
+                height: '80px',
+                width: '65%',
+                marginLeft: '50px',
+                marginRight: '100px'
+            }"
+        ></ngx-skeleton-loader>
+    </ng-container>
+    <br>
+</div>

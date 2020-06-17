@@ -1,0 +1,53 @@
+.near-git-table {
+    width: 80%;
+    align-items: center;
+    margin: auto;
+
+    .table {
+        margin-top: 12px;
+        margin-bottom: 50px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .header {
+        height: 50px;
+        background-color: #f6f8fa;
+    }
+    
+    td {
+        height: 80px;
+        border: solid 1px #d1d5da;
+    }
+
+    .user {
+        margin-top: 12px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        p {
+            margin: 5px;
+        }
+
+        .title {
+            font-weight: bold;
+        }
+
+        .body {
+            color: #a0a0a0;
+        }
+    }
+
+    .empty-state {
+        margin-top: 100px;
+        position: absolute;
+        width: 80%;
+        text-align: center;
+        font-size: 40px;
+        color: #585757;
+    }
+}
