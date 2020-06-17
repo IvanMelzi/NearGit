@@ -7,10 +7,26 @@
     position: absolute;
     background-color: black;
 
-    h1 {
-        margin: 12px;
+    .toolbar-container {
+        display: flex;
+        justify-content: space-between;
         color: white;
         font-weight: bold;
         height: 100%;
-    } 
+        margin-left: 12px;
+
+        .toolbar-git {
+            display: flex;
+            cursor: pointer;
+            img {
+                margin: 12px;
+            }
+
+            h3 {
+                margin-right: 12px;
+            }
+        }
+    }
+
+   
 }

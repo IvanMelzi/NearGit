@@ -11,4 +11,23 @@ import { Component } from '@angular/core';
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
-export class ToolbarComponent { }
+export class ToolbarComponent { 
+
+  /**
+   * Url to the repository.
+   *
+   * @private
+   * @type {string}
+   * @memberof ToolbarComponent
+   */
+  private _url : string = "https://github.com/IvanMelzi/NearGit";
+
+  /**
+   * Open the Repository in a new tab.
+   *
+   * @memberof ToolbarComponent
+   */
+  public goToRepo(): void {
+    window.open(this._url, "_blank");
+  }
+}
