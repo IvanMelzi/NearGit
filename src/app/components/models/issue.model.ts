@@ -1,5 +1,11 @@
 import { Label } from './label.model';
 
+/**
+ * Issue Model.
+ *
+ * @export
+ * @class Issue
+ */
 export class Issue {
     active_lock_reason: any
     assignee: any

@@ -1,6 +1,13 @@
 import { Issue } from './../components/models/issue.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
+/**
+ * Search Pipe by title.
+ *
+ * @export
+ * @class SearchByTitlePipe
+ * @implements {PipeTransform}
+ */
 @Pipe({
   name: 'searchByTitle'
 })
