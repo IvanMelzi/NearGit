@@ -1,3 +1,9 @@
+/**
+ * Label Model.
+ *
+ * @export
+ * @class Label
+ */
 export class Label {
     color: string
     default: boolean
