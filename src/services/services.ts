@@ -7,7 +7,7 @@ export class ConfigService {
 
   }
 
-  public getGit(api: string) {
+  public getGit(api: string): Promise<any> {
     return this.http.get('https://api.github.com' + api).toPromise();
   }
 
