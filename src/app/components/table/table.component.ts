@@ -1,3 +1,4 @@
+import { Issue } from './../models/issue.model';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TableComponent {
 
-  @Input() issues: any;
+  @Input() issues: Array<Issue>;
   @Input() skeletons: boolean;
 }
