@@ -1,3 +1,4 @@
+import { Issue } from './../../components/models/issue.model';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/services/services';
 
@@ -10,12 +11,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private gitService: ConfigService) { }
 
-  public issues: any = [];
+  public issues: Array<Issue> = [];
   public termToSearch: string = "";
   public showSkeleton: boolean = true;
 
   ngOnInit(): void {
-    this.gitService.getGit("/repos/facebook/react/issues").then((data) => {
+    this.gitService.getGit("/repos/facebook/react/issues").then((data: Array<Issue>) => {
       this.issues = data;
       this.showSkeleton = false;
     }).catch(_ => {

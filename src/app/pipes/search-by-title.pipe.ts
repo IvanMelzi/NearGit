@@ -1,3 +1,4 @@
+import { Issue } from './../components/models/issue.model';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,9 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SearchByTitlePipe implements PipeTransform {
 
-  transform(issues: Array<any>, ...args: any) {
+  transform(issues: Array<Issue>, ...args: any) {
     if (args[0]) {
-      return issues.filter((issue) => issue.title.includes(args[0]));
+      return issues.filter((issue) => issue.title.toUpperCase().includes(args[0].toUpperCase()));
     } else {
       return issues;
     }
